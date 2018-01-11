@@ -41,3 +41,65 @@ print("('X' in str) => ", ('X' in str))
 print("\nConcatenação da string")
 print("str + ' 3' => ", (str + ' 3'))
 ```
+
+### Strings são imutáveis
+
+Você não consiguirá alterar de maneira simples uma string em Python, para isso você terá que utilizar algum método para fazê-lo.
+
+```python
+str = 'PYTHON'
+str[1] = 'I'
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'str' object does not support item assignment
+```
+
+```python
+str = 'PYTHON'
+str.replace('Y', 'I')
+
+# OU
+
+str = 'PYTHON'
+str[:-1] + "M"
+```
+### Principais métodos da classe String
+
+* Capitlize
+    * Transforma a primeira letra da _string_ em maiúscula
+    * str.capitalize()
+
+* Count
+    * Conta a quantidade de vezes que repete um determinado caracter
+    * Retorna um inteiro
+    * str.count('a')
+
+* Starts With
+    * Verifica se uma _string_ inicia com um determinado caracter
+    * Retorna um booleano
+    * str.startswith('a')
+
+* Ends With
+    * Verifica se uma _string_ finaliza com um determinado caracter
+    * Retorna um booleano
+    * str.endswith('a')
+
+* Split
+    * Quebra uma string por determinado caracter
+    * Quando não se passa parametro, vai ser quebrado pelo espaço entre as palavras
+    * str.split()
+
+* Join
+    * Junta as palavras de uma lista
+    * ' '.join(['Chico', 'Anísio'])
+
+### Interpolação de Textos
+
+
+Há basicamente duas maneiras de se interpolar textos, utilizando o sinal de porcentagem (%) e as chaves ({}), sendo o segundo o mais utilizado ultimamente por não haver necessidade de saber o tipo do dado.
+
+```python
+"%d dias para copa" % (100)
+"{} dias para copa".format(100)
+"{dias} dias para copa".format(dias=100)
+```
