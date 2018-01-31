@@ -1,3 +1,4 @@
-capitulo-04/data
-capitulo-06/__pycache__
-capitulo-07/saida.zip
+*data
+*__pycache__
+*.zip
+
