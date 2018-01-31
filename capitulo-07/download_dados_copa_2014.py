@@ -56,5 +56,5 @@ if __name__ == "__main__":
 
 """
 Comando para executar o programa
-python download_dados_copa.py http://livropython.com.br/dados.zip
+python3 download_dados_copa_2014.py http://livropython.com.br/dados.zip
 """
