@@ -1,6 +1,5 @@
 import os
 
-
 BASE_DIR = 'data/meta-data'
 
 
@@ -38,6 +37,7 @@ def prompt():
     print("(s) Sair do programa")
     return input('')
 
+
 def main():
     # dicionário nome entidade -> atributos
     meta = {}
@@ -45,7 +45,7 @@ def main():
     # dicionário identificador -> nome entidade
     keys = {}
 
-    #dicionário de relacionamentos
+    # dicionário de relacionamentos
     relationship = {}
 
     for meta_data_file in os.listdir(BASE_DIR):
@@ -55,7 +55,6 @@ def main():
 
         meta[table_name] = attributes
         keys[identifier] = table_name
-
 
     for key, val in meta.items():
         for col in val:
